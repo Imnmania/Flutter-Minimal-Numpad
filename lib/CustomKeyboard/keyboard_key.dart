@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class KeyboardKey extends StatefulWidget {
-  final String label;
+  final dynamic label;
   final dynamic value;
   final ValueSetter<dynamic> onTap;
 
@@ -15,6 +15,20 @@ class KeyboardKey extends StatefulWidget {
 }
 
 class _KeyboardKeyState extends State<KeyboardKey> {
+  renderLabel() {
+    if (widget.label is Widget) {
+      return widget.label;
+    }
+
+    return Text(
+      widget.label,
+      style: TextStyle(
+        fontSize: 45.0,
+        fontWeight: FontWeight.normal,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -25,13 +39,7 @@ class _KeyboardKeyState extends State<KeyboardKey> {
         aspectRatio: 1.5,
         child: Container(
           child: Center(
-            child: Text(
-              widget.label,
-              style: TextStyle(
-                fontSize: 45.0,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
+            child: renderLabel(),
           ),
         ),
       ),
