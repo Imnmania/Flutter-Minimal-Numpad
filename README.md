@@ -1,6 +1,7 @@
-# flutter_custom_keyboard
+## Flutter Custom Numpad
 
-A new Flutter project.
+<p> This is a simple number pad created with dart and flutter. </p>
+
 
 ## Getting Started
 
