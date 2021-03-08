@@ -2,6 +2,9 @@
 
 <p> This is a simple number pad created with dart and flutter. </p>
 
+#### Screenshot:
+<p><img src="https://i.imgur.com/hm9inGh.png" alt="Screenshot" width="450"></p>
+
 
 ## Getting Started
 
